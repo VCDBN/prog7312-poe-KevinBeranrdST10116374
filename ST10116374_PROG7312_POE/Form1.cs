@@ -29,19 +29,9 @@ namespace ST10116374_PROG7312_POE
 
         private void IdAreaBT_Click(object sender, EventArgs e)
         {
-            // Initializes the variables to pass to the MessageBox.Show method.
-            string message = "Option disabled try replacing books instead!\n\rClose Form?";
-            string caption = "Error Option disabled for now!";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
-
-            // Displays the MessageBox.
-            result = MessageBox.Show(message, caption, buttons);
-            if (result == System.Windows.Forms.DialogResult.Yes)
-            {
-                // Closes the parent form.
-                Application.Exit();
-            }
+            var myForm = new Identifying_Areas_Form(); //To Move to next Form
+            myForm.Show();
+            this.Hide();
         }
 
         private void FindCallBT_Click(object sender, EventArgs e)

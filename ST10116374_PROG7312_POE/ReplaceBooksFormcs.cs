@@ -84,9 +84,6 @@ namespace ST10116374_PROG7312_POE
             {   
                 ItemsinlistPB.Value = UserLBX.Items.Count;
             }
-
-
-
         }
     }
 }

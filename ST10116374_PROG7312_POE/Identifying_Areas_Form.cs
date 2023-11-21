@@ -51,6 +51,7 @@ namespace ST10116374_PROG7312_POE
         public Identifying_Areas_Form()
         {
             InitializeComponent();
+            RewardPB.Visible = false;//Hide user Reward
         }
 
         private void checkBT_Click(object sender, EventArgs e)
@@ -59,16 +60,19 @@ namespace ST10116374_PROG7312_POE
             if (DeweyCall[callNumLBX.Text] != descriptionsLBX.Text)
             {
                 MessageBox.Show("Incorrect");
+                
             }
             else
             {
                 MessageBox.Show("Correct");
+                RewardPB.Visible = true;// SHows user reward
             }
         }
 
         private void calltoDesBT_Click(object sender, EventArgs e)
         {
             ClearList();//calls the clears method
+            RewardPB.Visible = false;
             foreach (KeyValuePair<string, string> kvp in DeweyCall)
             {
                 descriptionsLBX.Items.Add(kvp.Value);
@@ -87,6 +91,7 @@ namespace ST10116374_PROG7312_POE
         private void desctoCallNumBT_Click(object sender, EventArgs e)
         {
             ClearList();//calls the clears method
+            RewardPB.Visible = false;
             foreach (KeyValuePair<string, string> kvp in DeweyCall)
             {
                 callNumLBX.Items.Add(kvp.Key);
@@ -124,18 +129,6 @@ namespace ST10116374_PROG7312_POE
             callNumLBX.Items.Clear();
             descriptionsLBX.Items.Clear();
         }
-
-        private void ProgressBT_Click(object sender, EventArgs e)
-        {
-            //This is used to show the user porgess when doing call to desriptions
-            ItemsinlistPB.Maximum = 7;
-            ItemsinlistPB.Minimum = 0;
-            ItemsinlistPB.Style = ProgressBarStyle.Continuous;
-
-            for (int i = 0; i <= 10; i++)
-            {
-                ItemsinlistPB.Value = callNumLBX.Items.Count;
-            }
-        }
+    
     }
 }

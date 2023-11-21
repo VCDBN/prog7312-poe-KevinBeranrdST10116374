@@ -64,14 +64,28 @@ namespace ST10116374_PROG7312_POE
         public void CheckOrderBT_Click(object sender, EventArgs e)
         {
             
-            UserLBX.Sorted = true; //sorting algorithm used
-            
+            //sorting algorithm used
+            GenNumLBX.Sorted = true;//sorting algorithm used
+            if (UserLBX.Text != GenNumLBX.Text)
+            {
+                MessageBox.Show("Incorrect");
+
+            }
+            else
+            {
+                MessageBox.Show("Correct");
+                
+            }
+
 
         }
 
         private void ClearBTU_Click(object sender, EventArgs e)
         {
-            UserLBX.Items.Clear();//to clear list box TextBox1.Text = ListBox1.Items.Count.ToString();
+ 
+            UserLBX.Items.Clear();//to clear list box 
+            GenNumLBX.Sorted = false;
+            GenNumLBX.Items.Clear();//to clear list box 
         }
 
         private void ProgressBT_Click(object sender, EventArgs e)

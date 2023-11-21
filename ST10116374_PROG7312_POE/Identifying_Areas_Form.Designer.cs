@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Identifying_Areas_Form));
             this.descriptionsLBX = new System.Windows.Forms.ListBox();
             this.calltoDesBT = new System.Windows.Forms.Button();
             this.callNumLBX = new System.Windows.Forms.ListBox();
@@ -35,14 +36,14 @@
             this.checkBT = new System.Windows.Forms.Button();
             this.ReturnCloseBT = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.ItemsinlistPB = new System.Windows.Forms.ProgressBar();
-            this.ProgressBT = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.RewardPB = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RewardPB)).BeginInit();
             this.SuspendLayout();
             // 
             // descriptionsLBX
@@ -111,24 +112,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Welcome to Identifying Areas";
             // 
-            // ItemsinlistPB
-            // 
-            this.ItemsinlistPB.Location = new System.Drawing.Point(291, 143);
-            this.ItemsinlistPB.Name = "ItemsinlistPB";
-            this.ItemsinlistPB.Size = new System.Drawing.Size(230, 23);
-            this.ItemsinlistPB.TabIndex = 13;
-            // 
-            // ProgressBT
-            // 
-            this.ProgressBT.Location = new System.Drawing.Point(359, 184);
-            this.ProgressBT.Name = "ProgressBT";
-            this.ProgressBT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ProgressBT.Size = new System.Drawing.Size(81, 37);
-            this.ProgressBT.TabIndex = 14;
-            this.ProgressBT.Text = "Show Progress";
-            this.ProgressBT.UseVisualStyleBackColor = true;
-            this.ProgressBT.Click += new System.EventHandler(this.ProgressBT_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -185,19 +168,28 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "This Button will load 4 itmes in this list box and 7 in the other";
             // 
+            // RewardPB
+            // 
+            this.RewardPB.Image = ((System.Drawing.Image)(resources.GetObject("RewardPB.Image")));
+            this.RewardPB.Location = new System.Drawing.Point(342, 132);
+            this.RewardPB.Name = "RewardPB";
+            this.RewardPB.Size = new System.Drawing.Size(125, 95);
+            this.RewardPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RewardPB.TabIndex = 21;
+            this.RewardPB.TabStop = false;
+            // 
             // Identifying_Areas_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RewardPB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ProgressBT);
-            this.Controls.Add(this.ItemsinlistPB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReturnCloseBT);
             this.Controls.Add(this.checkBT);
@@ -207,6 +199,7 @@
             this.Controls.Add(this.descriptionsLBX);
             this.Name = "Identifying_Areas_Form";
             this.Text = "Identifying_Areas_Form";
+            ((System.ComponentModel.ISupportInitialize)(this.RewardPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,13 +214,12 @@
         private System.Windows.Forms.Button checkBT;
         private System.Windows.Forms.Button ReturnCloseBT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar ItemsinlistPB;
-        private System.Windows.Forms.Button ProgressBT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox RewardPB;
     }
 }
